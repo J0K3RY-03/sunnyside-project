@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+@mixin backgroundImageCenter{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin frauncesWeight900 {
+    font-weight: 900;
+    font-family: $fontTitle;
+}
+
+@mixin barlowWeight600 {
+    font-weight: 600;
+    font-family: $fontText;
+}
+
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

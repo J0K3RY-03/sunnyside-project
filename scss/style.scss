@@ -1,0 +1,179 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: $sizeTextBody;
+    font-weight: 600;
+    background: $bgBody;
+    header {
+        background: url(../assets/images/photos/header.jpg);
+        @include backgroundImageCenter;
+        width: 1440px;
+        height: 800px;
+
+        h1 {
+            text-align: center;
+            color: $colorTextHeader;
+            letter-spacing: 0.5rem;
+            font-size: 56px;
+            margin-top: 3rem;
+            @include frauncesWeight900;
+        }
+
+        .arrow-down {
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        nav {
+            width: 1352px;
+            height: 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 2rem;
+            width: 100%;
+
+            figure {
+                width: 170px;
+                height: 33px;
+
+                .logo {
+                    width: 100%;
+                }
+            }
+
+            .nav-list {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+
+                .nav-list-items {
+                    margin-right: 2rem;
+                    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .nav-items-link {
+                        color: $colorTextHeader;
+                        @include barlowWeight600;
+                    }
+                    
+                    .btn {
+                        background: $colorTextHeader;
+                        color: $colorTextBlackGeneral;
+                        border-radius: 28px;
+                        padding: 0.8rem 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-articles {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+
+        article {
+           height: 600px;
+           width: 720px;
+           @include flexColumnCenter;
+           padding: 5rem 7rem;
+           background: $colorTextHeader;
+
+           figure {
+                img {
+                    display: block
+                }
+            }
+
+           h2{
+            @include frauncesWeight900;
+            font-size: 40px;
+            margin-bottom: 1.5rem;
+           }
+
+           p {
+            color: $textParGrey;
+            line-height: 30px;
+            text-align: left;
+           }
+
+           .link-rectangle {
+                position: relative;
+
+                a {
+                    text-align: left;
+                    font-size: 15px;
+                    color: $colorTextBlackGeneral;
+                    letter-spacing: 1px;
+                    @include frauncesWeight900;
+                    display: block;
+                    width: 100%;
+                    z-index: 1;
+                }
+
+                .rectangle {
+                    position: absolute;
+                    border-radius: 28px;
+                    background: #FE7766;
+                    height: 2px;
+                    width: 120px;
+                    bottom: 5px;
+                    z-index: 2;
+                }
+            }
+
+           &:nth-of-type(4) {
+            grid-row: 2/3;
+            grid-column: -2/-3;
+           }
+
+           &:nth-of-type(5) {
+                justify-content: flex-end;
+                padding: 3rem 8rem;
+                background: url(../assets/images/photos/graphic-design.jpg);
+                h2 {
+                    color: $colorTextBlackSecondary;
+                    font-size: 28px;
+                }
+
+                p {
+                    color: $textParGreen;
+                    text-align: center;
+                }
+            }
+
+           &:nth-of-type(6) {
+                justify-content: flex-end;
+                padding: 3rem 8rem;
+                background: url(../assets/images/photos/photography.jpg);
+                
+                h2 {
+                    color: $titleLastArtLightBlack;
+                    font-size: 28px;
+                }
+
+                p {
+                    color: $textParBigGreen;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
