@@ -19,11 +19,15 @@ body {
     font-weight: 600;
     font-family: $fontText;
     background: $bgBody;
-    header {
+
+    .containerPrincipal {
+        width: 1440px;
+    
+        header {
         background: url(../assets/images/photos/header.jpg);
         @include backgroundImageCenter;
-        width: 1440px;
         height: 800px;
+        display: block;
 
         h1 {
             text-align: center;
@@ -196,7 +200,6 @@ body {
     .section-testimonials {
         background: $colorTextHeader;
         padding: 4rem;
-        width: 1440px;
 
         h2 {
             font-size: 20px;
@@ -239,6 +242,63 @@ body {
                 .work {
                     color: $colorTitleTestimonials;
                     font-size: 14px;
+                }
+            }
+        }
+    }
+
+        .section-img {
+            display: flex;
+            figure {
+                height: 447px;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        footer {
+            height: 350px;
+            background: #90D4C6;
+            padding: 4rem 0;
+            @include flexColumnCenter;
+
+            .logo-footer {
+                height: 33px;
+                width: 170px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            nav {
+
+                .footer-nav-list {
+                    list-style: none;
+                    @include flexRowCenter;
+                    margin-bottom: 3rem;
+
+                    .footer-list-items {
+                        padding: 2rem;
+
+                        a {
+                            color: #458D7E;
+                        }
+                    }
+                }
+            }
+
+            .media {
+                
+                .nav-list-media {
+                    list-style: none;
+                    @include flexRowCenter;
+                    
+                    .nav-list-items-media {
+                        padding: 0.5rem;
+                    }
                 }
             }
         }

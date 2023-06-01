@@ -15,17 +15,20 @@ body {
   font-size: 18px;
   font-weight: 600;
   font-family: "Barlow", sans-serif;
-  background: #dadada;
+  background: #f2f2f2;
 }
-body header {
+body .containerPrincipal {
+  width: 1440px;
+}
+body .containerPrincipal header {
   background: url(../assets/images/photos/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 1440px;
   height: 800px;
+  display: block;
 }
-body header h1 {
+body .containerPrincipal header h1 {
   text-align: center;
   color: #ffffff;
   letter-spacing: 0.5rem;
@@ -34,11 +37,11 @@ body header h1 {
   font-weight: 900;
   font-family: "Fraunces", serif;
 }
-body header .arrow-down {
+body .containerPrincipal header .arrow-down {
   text-align: center;
   margin-top: 6rem;
 }
-body header nav {
+body .containerPrincipal header nav {
   width: 1352px;
   height: 56px;
   display: flex;
@@ -47,41 +50,41 @@ body header nav {
   padding: 3rem 2rem;
   width: 100%;
 }
-body header nav figure {
+body .containerPrincipal header nav figure {
   width: 170px;
   height: 33px;
 }
-body header nav figure .logo {
+body .containerPrincipal header nav figure .logo {
   width: 100%;
 }
-body header nav .nav-list {
+body .containerPrincipal header nav .nav-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
-body header nav .nav-list .nav-list-items {
+body .containerPrincipal header nav .nav-list .nav-list-items {
   margin-right: 2rem;
 }
-body header nav .nav-list .nav-list-items:last-child {
+body .containerPrincipal header nav .nav-list .nav-list-items:last-child {
   margin-right: 0;
 }
-body header nav .nav-list .nav-list-items .nav-items-link {
+body .containerPrincipal header nav .nav-list .nav-list-items .nav-items-link {
   color: #ffffff;
   font-weight: 600;
   font-family: "Barlow", sans-serif;
 }
-body header nav .nav-list .nav-list-items .btn {
+body .containerPrincipal header nav .nav-list .nav-list-items .btn {
   background: #ffffff;
   color: #24303E;
   border-radius: 28px;
   padding: 0.8rem 1.8rem;
 }
-body .section-articles {
+body .containerPrincipal .section-articles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
-body .section-articles article {
+body .containerPrincipal .section-articles article {
   height: 600px;
   width: 720px;
   display: flex;
@@ -91,27 +94,27 @@ body .section-articles article {
   padding: 5rem 7rem;
   background: #ffffff;
 }
-body .section-articles article figure img {
+body .containerPrincipal .section-articles article figure img {
   display: block;
 }
-body .section-articles article h2 {
+body .containerPrincipal .section-articles article h2 {
   font-weight: 900;
   font-family: "Fraunces", serif;
   font-size: 40px;
   margin-bottom: 1.5rem;
 }
-body .section-articles article p {
+body .containerPrincipal .section-articles article p {
   color: #808397;
   line-height: 30px;
   text-align: left;
 }
-body .section-articles article .link-rectangle {
+body .containerPrincipal .section-articles article .link-rectangle {
   position: relative;
   height: 80px;
   width: 120px;
   align-self: flex-start;
 }
-body .section-articles article .link-rectangle a {
+body .containerPrincipal .section-articles article .link-rectangle a {
   position: absolute;
   text-align: left;
   font-size: 15px;
@@ -125,7 +128,7 @@ body .section-articles article .link-rectangle a {
   bottom: 30px;
   z-index: 2;
 }
-body .section-articles article .link-rectangle .rectangle {
+body .containerPrincipal .section-articles article .link-rectangle .rectangle {
   position: absolute;
   border-radius: 28px;
   opacity: 0.25;
@@ -135,48 +138,47 @@ body .section-articles article .link-rectangle .rectangle {
   left: -4px;
   z-index: 1;
 }
-body .section-articles article .link-rectangle .red {
+body .containerPrincipal .section-articles article .link-rectangle .red {
   background: #FE7766;
 }
-body .section-articles article .link-rectangle .yellow {
+body .containerPrincipal .section-articles article .link-rectangle .yellow {
   background: #FAD400;
 }
-body .section-articles article:nth-of-type(4) {
+body .containerPrincipal .section-articles article:nth-of-type(4) {
   grid-row: 2/3;
   grid-column: -2/-3;
 }
-body .section-articles article:nth-of-type(5) {
+body .containerPrincipal .section-articles article:nth-of-type(5) {
   justify-content: flex-end;
   padding: 3rem 8rem;
   background: url(../assets/images/photos/graphic-design.jpg);
 }
-body .section-articles article:nth-of-type(5) h2 {
+body .containerPrincipal .section-articles article:nth-of-type(5) h2 {
   color: #24554A;
   font-size: 28px;
 }
-body .section-articles article:nth-of-type(5) p {
+body .containerPrincipal .section-articles article:nth-of-type(5) p {
   color: #3E7467;
   text-align: center;
 }
-body .section-articles article:nth-of-type(6) {
+body .containerPrincipal .section-articles article:nth-of-type(6) {
   justify-content: flex-end;
   padding: 3rem 8rem;
   background: url(../assets/images/photos/photography.jpg);
 }
-body .section-articles article:nth-of-type(6) h2 {
+body .containerPrincipal .section-articles article:nth-of-type(6) h2 {
   color: #052C3B;
   font-size: 28px;
 }
-body .section-articles article:nth-of-type(6) p {
+body .containerPrincipal .section-articles article:nth-of-type(6) p {
   color: #19536C;
   text-align: center;
 }
-body .section-testimonials {
+body .containerPrincipal .section-testimonials {
   background: #ffffff;
   padding: 4rem;
-  width: 1440px;
 }
-body .section-testimonials h2 {
+body .containerPrincipal .section-testimonials h2 {
   font-size: 20px;
   font-family: "Fraunces", serif;
   color: #A7AAAD;
@@ -185,35 +187,85 @@ body .section-testimonials h2 {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-body .section-testimonials .container-testimonials {
+body .containerPrincipal .section-testimonials .container-testimonials {
   display: flex;
   justify-content: center;
 }
-body .section-testimonials .container-testimonials article {
+body .containerPrincipal .section-testimonials .container-testimonials article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
 }
-body .section-testimonials .container-testimonials article figure img {
+body .containerPrincipal .section-testimonials .container-testimonials article figure img {
   border-radius: 50%;
   height: 72px;
   width: 72px;
   margin-bottom: 3rem;
 }
-body .section-testimonials .container-testimonials article .commentary {
+body .containerPrincipal .section-testimonials .container-testimonials article .commentary {
   line-height: 32px;
   color: #5B636D;
   text-align: center;
   margin-bottom: 2rem;
 }
-body .section-testimonials .container-testimonials article h3 {
+body .containerPrincipal .section-testimonials .container-testimonials article h3 {
   margin-bottom: 0.8rem;
 }
-body .section-testimonials .container-testimonials article .work {
+body .containerPrincipal .section-testimonials .container-testimonials article .work {
   color: #A7AAAD;
   font-size: 14px;
+}
+body .containerPrincipal .section-img {
+  display: flex;
+}
+body .containerPrincipal .section-img figure {
+  height: 447px;
+}
+body .containerPrincipal .section-img figure img {
+  width: 100%;
+  display: block;
+}
+body .containerPrincipal footer {
+  height: 350px;
+  background: #90D4C6;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .containerPrincipal footer .logo-footer {
+  height: 33px;
+  width: 170px;
+}
+body .containerPrincipal footer .logo-footer img {
+  width: 100%;
+}
+body .containerPrincipal footer nav .footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+body .containerPrincipal footer nav .footer-nav-list .footer-list-items {
+  padding: 2rem;
+}
+body .containerPrincipal footer nav .footer-nav-list .footer-list-items a {
+  color: #458D7E;
+}
+body .containerPrincipal footer .media .nav-list-media {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .containerPrincipal footer .media .nav-list-media .nav-list-items-media {
+  padding: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
