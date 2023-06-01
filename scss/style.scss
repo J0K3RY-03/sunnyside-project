@@ -17,6 +17,7 @@ body {
     justify-content: center;
     font-size: $sizeTextBody;
     font-weight: 600;
+    font-family: $fontText;
     background: $bgBody;
     header {
         background: url(../assets/images/photos/header.jpg);
@@ -116,8 +117,12 @@ body {
 
            .link-rectangle {
                 position: relative;
+                height: 80px;
+                width: 120px;
+                align-self: flex-start;
 
                 a {
+                    position: absolute;
                     text-align: left;
                     font-size: 15px;
                     color: $colorTextBlackGeneral;
@@ -125,17 +130,28 @@ body {
                     @include frauncesWeight900;
                     display: block;
                     width: 100%;
-                    z-index: 1;
+                    left: 0;
+                    bottom: 30px;
+                    z-index: 2;
                 }
 
                 .rectangle {
                     position: absolute;
                     border-radius: 28px;
+                    opacity: 0.25;
+                    height: 8px;
+                    width: 125px;
+                    bottom: 29px;
+                    left: -4px;
+                    z-index: 1;
+                }
+
+                .red {
                     background: #FE7766;
-                    height: 2px;
-                    width: 120px;
-                    bottom: 5px;
-                    z-index: 2;
+                }
+
+                .yellow {
+                    background: #FAD400;
                 }
             }
 
@@ -172,6 +188,57 @@ body {
                 p {
                     color: $textParBigGreen;
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    .section-testimonials {
+        background: $colorTextHeader;
+        padding: 4rem;
+        width: 1440px;
+
+        h2 {
+            font-size: 20px;
+            font-family: $fontTitle;
+            color: $colorTitleTestimonials;
+            letter-spacing: 5px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .container-testimonials {
+            display: flex;
+            justify-content: center;
+
+            article {
+                @include flexColumnCenter;
+                padding: 1.5rem;
+
+                figure {
+                    img {
+                        border-radius: 50%;
+                        height: 72px;
+                        width: 72px;
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                .commentary {
+                    line-height: 32px;
+                    color: $colorTextTestimonials;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+
+                h3 {
+                    margin-bottom: 0.8rem;
+                }
+
+                .work {
+                    color: $colorTitleTestimonials;
+                    font-size: 14px;
                 }
             }
         }
